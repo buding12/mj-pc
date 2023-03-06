@@ -17,7 +17,7 @@
           <el-input v-model="formData.password" type="password"></el-input>
         </el-form-item>
         <!-- 登录 -->
-        <el-form-item>
+        <el-form-item class="btn-box">
           <el-button type="primary" @click="submit">登录</el-button>
           <el-button>重置</el-button>
         </el-form-item>
@@ -109,8 +109,20 @@ export default {
     color: #fff;
   }
   .box-banner {
-    padding: 0 20px;
-    height: 310px;
+    padding: 0 40px;
+    margin-top: 20px;
+    .btn-box{
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  ::v-deep {
+    .el-form--label-top .el-form-item__label {
+      padding: 0 !important;
+    }
+  }
+  .el-form-item{
+    margin-bottom: 10px;
   }
 }
 </style>

@@ -1,8 +1,12 @@
 <template>
-  <div></div>
+  <div class="login-page">
+    login
+  </div>
 </template>
 
 <script>
+import { login } from '@/api/user';
+
 export default {
   name: 'login-page',
   props: {},
@@ -14,7 +18,12 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    login({
+      username: 'admin5',
+      password: 'admin',
+    });
+  },
   mounted() {},
   methods: {
 
@@ -22,5 +31,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+.login-page {
+  // 在css中要使用 ~@ 代表 src根目录
+  background: url('~@/assets/svg/login-bg.svg') no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
 </style>

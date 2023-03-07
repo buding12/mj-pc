@@ -1,5 +1,8 @@
+<!-- eslint-disable vuejs-accessibility/alt-text -->
 <template>
-  <div></div>
+  <div>
+    <img src="@/assets/svg/404.png" alt srcset />
+  </div>
 </template>
 
 <script>
@@ -22,5 +25,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+img {
+  width: 100%;
+}
 </style>

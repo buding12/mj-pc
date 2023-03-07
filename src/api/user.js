@@ -8,3 +8,10 @@ export function login(data) {
     data,
   });
 }
+
+export function getUserInfo() {
+  return request({
+    method: 'get',
+    url: '/auth/currentUser',
+  });
+}

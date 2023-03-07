@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '*',
-    redirect: '/404',
+    redirect: '/login',
   },
   {
     path: '/404',

@@ -73,6 +73,7 @@ export default {
         const { data } = await login(this.formData);
         // console.log(data.token);
         this.$store.commit('SET_TOKEN', data.token);
+        this.$router.replace('/layout');
       });
     },
   },
@@ -111,7 +112,7 @@ export default {
   .box-banner {
     padding: 0 40px;
     margin-top: 20px;
-    .btn-box{
+    .btn-box {
       margin-top: 20px;
       text-align: center;
     }
@@ -121,7 +122,7 @@ export default {
       padding: 0 !important;
     }
   }
-  .el-form-item{
+  .el-form-item {
     margin-bottom: 10px;
   }
 }

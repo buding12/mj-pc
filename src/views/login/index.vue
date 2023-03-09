@@ -27,6 +27,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line import/no-cycle
 import { login } from '@/api/user';
 
 export default {

@@ -30,7 +30,7 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="submit">确定</el-button>
-          <el-button>取消</el-button>
+          <el-button @click="cancel">取消</el-button>
         </el-form-item>
       </el-form>
     </el-drawer>
@@ -125,6 +125,15 @@ export default {
         this.$emit('close');
         this.$emit('updateData');
       });
+    },
+    cancel() {
+      if (this.articleId) {
+        // 编辑
+        this.getArticleInfo();
+      } else {
+        // 新增 调用element-ui的form组件身上的resetFields() 即可清空表单
+        this.$refs.editForm.resetFields();
+      }
     },
     async  getArticleInfo() {
       if (this.articleId === null) return;
